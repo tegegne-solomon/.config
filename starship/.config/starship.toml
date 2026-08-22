@@ -19,7 +19,7 @@ vicmd_symbol = "[❮](bold yellow) "
 truncation_length = 4
 truncate_to_repo = true
 style = "bold cyan"
-repo_indicator = " "
+#repo_indicator = " "
 
 # Git settings built to survive slow repositories
 [git_branch]
@@ -30,7 +30,7 @@ repo_indicator = " "
 [git_status]
 style = "bold red"
 format = "([\\[$all_status$ahead_behind\\]]($style) )"
-ignore_repo_paths = ["~/dotfiles/hypr"] 
+#ignore_repo_paths = ["~/dotfiles/hypr"] 
 
 # Showing system resources usage context cleanly
 [cmd_duration]
