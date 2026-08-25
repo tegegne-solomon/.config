@@ -1,0 +1,39 @@
+* {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 12px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #888888;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#network, #pulseaudio, #backlight, #battery, #clock, #tray {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+#battery.warning {
+    color: #ffaa00;
+}
+
+#battery.critical {
+    color: #ff0000;
+}

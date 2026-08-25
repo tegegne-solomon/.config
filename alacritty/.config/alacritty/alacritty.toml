@@ -19,7 +19,7 @@ y = 12
 # TYPOGRAPHY (FONT SELECTION)
 # ==========================================
 [font]
-size = 16.0                # Adjust to your preference
+size = 20.0                # Adjust to your preference
 
 [font.normal]
 family = "JetBrainMono Nerd Font"  # High-quality coding font with icon/glyph support
@@ -39,8 +39,8 @@ history = 10000            # Large back-scroll buffer for code outputs
 # THEMING: MONOKAI NIGHT (STUNNING PROMPT ACCENTS)
 # ==========================================
 [colors.primary]
-background = "#282a2e"     # dark gray
-foreground = "#f9f9f9"     # medium gray
+background = "#24283b"     # dark gray
+foreground = "#a9b1d6"     # medium gray
 
 [colors.normal]
 black   = "#272822"

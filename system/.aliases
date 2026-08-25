@@ -20,7 +20,6 @@ alias up='sudo apt update && sudo apt upgrade -y'
 alias o='open .'
 alias c='code .'
 alias al='alacritty'
-alias lg='lazygit'
 alias type='ttyper -l english200 -w 30'
 
 # Environment Layout Toggles
@@ -51,3 +50,48 @@ alias ai-nvidia='uv tool run --from aider-chat aider --model openrouter/nvidia/n
 alias aiqwen='ollama run qwen2.5:7b'
 alias ailama='ollama run llama3.1'
 alias aiweb='open-webui serve'
+
+#!/bin/bash
+# Shell aliases - sourced by bash/zsh/fish
+
+# ============ NAVIGATION ============
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias dotfiles="cd ~/dotfiles"
+alias config="cd ~/.config"
+
+# ============ SYSTEM (Arch) ============
+alias update="sudo pacman -Syu"
+alias install="sudo pacman -S"
+alias remove="sudo pacman -Rns"
+alias search="pacman -Ss"
+alias aur="yay -S"
+alias cleanup="sudo pacman -Scc"
+
+# ============ HYPRLAND ============
+alias reload="hyprctl reload"
+alias lock="hyprlock"
+alias sleep="systemctl suspend"
+alias logout="hyprctl dispatch exit"
+
+# ============ TOOLS ============
+alias v="nvim"
+alias y="yazi"
+alias lg="lazygit"
+alias b="btop"
+
+
+# ============ SAFETY ============
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
+alias mkdir="mkdir -p"
+
+# ============ GIT ============
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push"
+alias gl="git pull"

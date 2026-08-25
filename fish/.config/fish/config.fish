@@ -54,7 +54,7 @@ end
 # Launch system hardware stats cleanly upon shell entry
 
 if command -v fastfetch &>/dev/null
-    fastfetch
+	# fastfetch
 end
 
 # ==============================================================================

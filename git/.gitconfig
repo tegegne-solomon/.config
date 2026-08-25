@@ -27,12 +27,6 @@
     ui = auto
 
 [alias]
-    # Handcrafted shortcuts to make your terminal work effortless
-    st = status
-    co = checkout
-    br = branch
-    cm = commit -m
-    ps = push
-    pl = pull
+   
     # Ultimate visual log history tracker (Try typing 'git lg' in your terminal!)
     # lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s %C(italic white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --all
