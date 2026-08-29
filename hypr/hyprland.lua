@@ -86,8 +86,8 @@ hl.on("hyprland.start", function()
     for _, command in ipairs({
         "waybar",
         "hyprpaper",
-        "kitty",
         "firefox",
+        "kitty",
         "wl-paste --type text --watch cliphist store",
         "wl-paste --type image --watch cliphist store",
         "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",

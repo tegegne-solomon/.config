@@ -21,6 +21,7 @@ alias o='open .'
 alias c='code .'
 alias al='alacritty'
 alias type='ttyper -l english200 -w 30'
+alias bon="cbonsai -i -l"
 
 # Environment Layout Toggles
 alias qwerty="setxkbmap us"
@@ -33,7 +34,7 @@ alias normal='redshift -x'
 
 # Tools & Gaming
 alias tt='ttyper -w 30'
-alias sleep="cmatrix -s -b -C green"
+# alias sleep="cmatrix -s -b -C green"
 alias ws='dbus-send --session --dest=org.Cinnamon --type=method_call /org/Cinnamon org.Cinnamon.ShowExpo'
 
 # Notification alert tool for long-running processes
