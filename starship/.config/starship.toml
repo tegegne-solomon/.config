@@ -16,7 +16,7 @@ vicmd_symbol = "[❮](bold yellow) "
 
 # Directory rendering and truncation adjustments
 [directory]
-truncation_length = 4
+truncation_length = 2
 truncate_to_repo = true
 style = "bold cyan"
 #repo_indicator = " "
@@ -30,7 +30,7 @@ style = "bold cyan"
 [git_status]
 style = "bold red"
 format = "([\\[$all_status$ahead_behind\\]]($style) )"
-#ignore_repo_paths = ["~/dotfiles/hypr"] 
+#ignore_repo_paths = ["~/dotfiles/hypr"]
 
 # Showing system resources usage context cleanly
 [cmd_duration]
@@ -47,3 +47,18 @@ format = "via [${symbol}${version}]($style) "
 symbol = " "
 format = "via [${symbol}${version}]($style) "
 
+
+#🚀 Remote Synchronization Signs
+#⇡ (Ahead): You have local commits that haven't been pushed to GitHub yet.
+#⇣ (Behind): Someone pushed changes to GitHub, and your local machine is behind (you need to git pull).
+#⇕ (Diverged): Your local repo and GitHub have both changed independently. You will have to pull and fix potential conflicts.
+
+#📁 Local File Workspace Signs
+#+ (Staged): Files have been added to the staging index using git add and are ready to be committed.
+#! (Modified): Files that Git tracks have been edited but haven't been staged yet.
+#? (Untracked): Brand new files have been created in the folder that Git isn't tracking yet.
+#» (Renamed): A file was moved or renamed.
+#✘ (Deleted): A file has been deleted from the directory.
+#= (Conflicted): A merge conflict has occurred and needs manual intervention.
+#$ (Stashed): You have hidden changes safely tucked away in your local hidden stash storage (git stash).
+#

@@ -6,7 +6,7 @@ TERM = "xterm-256color"
 # WINDOW & LAYOUT
 # ==========================================
 [window]
-startup_mode = "Fullscreen"
+#startup_mode = "Fullscreen"
 decorations = "None"
 opacity = 1.0            # Subtle, elegant transparency
 dynamic_title = true
@@ -19,7 +19,7 @@ y = 12
 # TYPOGRAPHY (FONT SELECTION)
 # ==========================================
 [font]
-size = 20.0                # Adjust to your preference
+size = 18.0                # Adjust to your preference
 
 [font.normal]
 family = "JetBrainMono Nerd Font"  # High-quality coding font with icon/glyph support

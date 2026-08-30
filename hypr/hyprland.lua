@@ -76,7 +76,12 @@ hl.config({
 
 -- ---------- Window rules ----------
 hl.window_rule({ name = "code-workspace", match = { class = "^(code|Code|vscode)$" }, workspace = workspace.editor })
-hl.window_rule({ name = "browser-workspace", match = { class = "^(firefox|google-chrome|chrome)$" }, workspace = workspace.browser })
+hl.window_rule({
+    name = "browser-workspace",
+    match = { class = "^(firefox|google-chrome|chrome)$" },
+    workspace = workspace.browser .. " silent",
+    no_initial_focus = true,
+})
 hl.window_rule({ name = "terminal-workspace", match = { class = "^kitty$" }, workspace = workspace.terminal })
 hl.window_rule({ name = "files-workspace", match = { class = "^(thunar|xpad)$" }, workspace = workspace.files })
 hl.window_rule({ name = "media-workspace", match = { class = "^vlc$" }, workspace = workspace.media })
@@ -86,7 +91,7 @@ hl.on("hyprland.start", function()
     for _, command in ipairs({
         "waybar",
         "hyprpaper",
-        "firefox",
+        -- "firefox",
         "kitty",
         "wl-paste --type text --watch cliphist store",
         "wl-paste --type image --watch cliphist store",
@@ -100,7 +105,9 @@ hl.on("hyprland.start", function()
         hl.exec_cmd(command)
     end
 
-    hl.dispatch(hl.dsp.focus({ workspace = workspace.terminal }))
+    -- Applications start asynchronously. Switch to the terminal workspace
+    -- after the delayed Kitty window has had time to map.
+    -- hl.exec_cmd("sh -c 'sleep 4; hyprctl dispatch workspace 3'")
 end)
 
 -- ---------- Bind helpers ----------

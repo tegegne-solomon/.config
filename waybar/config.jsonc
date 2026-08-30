@@ -16,7 +16,6 @@
         "battery",
         "clock"
     ],
-    
     "network": {
         "format-wifi": "{signalStrength}%",
         "format-ethernet": "Connected",
