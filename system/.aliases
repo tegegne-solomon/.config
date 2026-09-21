@@ -20,7 +20,6 @@ alias up='sudo apt update && sudo apt upgrade -y'
 alias o='open .'
 alias c='code .'
 alias al='alacritty'
-alias type='ttyper -l english200 -w 30'
 alias bon="cbonsai -i -l"
 
 # Environment Layout Toggles
@@ -34,6 +33,10 @@ alias normal='redshift -x'
 
 # Tools & Gaming
 alias tt='ttyper -w 30'
+alias tl='ttyper -w 30 -l'
+alias t10='ttyper -w 10 -l english100'
+alias type='ttyper -l english1000 -w 30'
+alias tn='ttyper -w'
 # alias sleep="cmatrix -s -b -C green"
 alias ws='dbus-send --session --dest=org.Cinnamon --type=method_call /org/Cinnamon org.Cinnamon.ShowExpo'
 
@@ -56,11 +59,9 @@ alias aiweb='open-webui serve'
 # Shell aliases - sourced by bash/zsh/fish
 
 # ============ NAVIGATION ============
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias dotfiles="cd ~/dotfiles"
-alias config="cd ~/.config"
+alias .="cd .."
+alias ..="cd ../.."
+alias ...="cd ../../.."
 
 # ============ SYSTEM (Arch) ============
 alias update="sudo pacman -Syu"
@@ -96,3 +97,7 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push"
 alias gl="git pull"
+
+#======= Explorer =========
+
+alias open="xdg-open ."

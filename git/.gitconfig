@@ -4,7 +4,7 @@
 
 [core]
     # Tells Git which text editor to open for commit messages (nano, vim, code, etc.)
-    editor = nano
+    editor = nvim
     # Ensures line endings play nice between Linux, Mac, and Windows
     autocrlf = input
     # Speeds up status checks on large repos by caching file changes
@@ -27,6 +27,6 @@
     ui = auto
 
 [alias]
-   
+
     # Ultimate visual log history tracker (Try typing 'git lg' in your terminal!)
-    # lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s %C(italic white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s %C(italic white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --all

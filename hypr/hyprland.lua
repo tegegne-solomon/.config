@@ -3,7 +3,8 @@
 local main_mod = "SUPER"
 local terminal = "kitty"
 local launcher = "rofi -show drun"
-
+local browser = "firefox"
+local editor = "code"
 local workspace = {
     editor = 1,
     browser = 2,
@@ -23,19 +24,18 @@ hl.env("HYPRCURSOR_SIZE", "32")
 -- ---------- Settings ----------
 hl.config({
     input = {
-        -- US QWERTY followed by US Dvorak; Super+Space switches layouts.
         kb_layout = "us,us",
         kb_variant = "dvorak,",
         kb_options = "grp:win_space_toggle",
-        repeat_rate = 60,
-        repeat_delay = 250,
+        repeat_rate = 80,
+        repeat_delay = 200,
     },
 
     general = {
         layout = "master",
         gaps_in = 2,
         gaps_out = 4,
-        border_size = 2,
+        border_size = 4,
         col = {
             active_border = { colors = { "rgba(6699ccff)", "rgba(3366aaff)" }, angle = 45 },
             inactive_border = "rgba(333333aa)",
@@ -43,7 +43,7 @@ hl.config({
     },
 
     decoration = {
-        rounding = 10,
+        rounding = 15,
         shadow = { enabled = false },
         blur = { enabled = false },
     },
@@ -127,6 +127,8 @@ command(main_mod .. " + SHIFT + Return", terminal .. " -e btop", "Open system mo
 bind(main_mod .. " + C", hl.dsp.window.close(), "Close focused window")
 bind(main_mod .. " + SHIFT + M", hl.dsp.exit(), "Exit Hyprland")
 command(main_mod .. " + R", launcher, "Open application launcher")
+command(main_mod .. " + B", browser, "Open browser")
+command(main_mod .. " + P", editor, "Open code editor")
 
 -- Workspaces (Dvorak home-row-oriented keys)
 for index, key in ipairs({ "A", "O", "E", "U", "I" }) do
@@ -171,7 +173,7 @@ bind(main_mod .. " + SHIFT + P", hl.dsp.window.pseudo(), "Toggle pseudo-tile")
 command(main_mod .. " + V", "cliphist list | rofi -dmenu | cliphist decode | wl-copy", "Open clipboard history")
 command(main_mod .. " + W", "makoctl dismiss", "Dismiss notifications")
 command(main_mod .. " + CTRL + E", "thunar", "Open file manager")
-command(main_mod .. " + P", "pavucontrol", "Open audio settings")
+command(main_mod .. " + CTRL + P", "pavucontrol", "Open audio settings")
 
 -- Special workspaces
 bind(main_mod .. " + S", hl.dsp.workspace.toggle_special("notes"), "Toggle notes workspace")
